@@ -1,0 +1,109 @@
+<div class="d-flex justify-content-center gap-3 mt-4 button-container">
+
+  <button class="btn btn-primary bill-btn" data-bs-toggle="modal" data-bs-target="#Modal1">
+    Annamalai Portion Bill Calculate
+  </button>
+
+  <button class="btn btn-success bill-btn" data-bs-toggle="modal" data-bs-target="#Modal2">
+    Karthi Portion Bill Calculate
+  </button>
+
+  <button class="btn btn-warning bill-btn " data-bs-toggle="modal" data-bs-target="#Modal3">
+    Koushik Portion Bill Calculate
+  </button>
+
+</div>
+
+<!--Modal1 -->
+<div class="modal fade" id="Modal1" tabindex="-1" #Modal1Ref>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">EB & Water Bill Calculator for Your Portion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="billForm">
+          <div class="mb-3">
+            <label for="ebUnit" class="form-label">Enter EB Unit</label>
+            <input type="number" class="form-control" [(ngModel)]="ebUnit" name="ebUnit" placeholder="Units">
+          </div>
+          <div class="mb-3">
+            <label for="waterUnit" class="form-label">Enter Water Unit</label>
+           <input type="number" class="form-control" [(ngModel)]="waterUnit" name="waterUnit" placeholder="Units">
+          </div>
+          <button type="button" class="btn btn-primary" (click)="calculateBill(0)">Calculate</button>
+        </form>
+
+        <hr>
+
+        <p>EB Bill Amount: ₹ <span >{{ebBill}}</span></p>
+        <p>Water Bill Amount: ₹ <span >{{waterBill}}</span></p>
+        <p><strong>Total Amount: ₹ <span>{{total}}</span></strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal2 -->
+<div class="modal fade" id="Modal2" tabindex="-1" #Modal2Ref>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">EB & Water Bill Calculator for Your Portion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="billForm">
+          <div class="mb-3">
+            <label for="ebUnit" class="form-label">Enter EB Unit</label>
+            <input type="number" class="form-control" [(ngModel)]="ebUnit" name="ebUnit" placeholder="Units">
+          </div>
+          <div class="mb-3">
+            <label for="waterUnit" class="form-label">Enter Water Unit</label>
+            <input type="number" class="form-control" [(ngModel)]="waterUnit" name="waterUnit" placeholder="Units">
+          </div>
+          <button type="button" class="btn btn-primary" (click)="calculateBill(1)">Calculate</button>
+        </form>
+
+        <hr>
+
+        <p>EB Bill Amount: ₹ <span >{{ebBill}}</span></p>
+        <p>Water Bill Amount: ₹ <span >{{waterBill}}</span></p>
+        <p><strong>Total Amount: ₹ <span>{{total}}</span></strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--Modal3 -->
+<div class="modal fade" id="Modal3" tabindex="-1" #Modal3Ref>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Eb & Water Bill Calculate for your Portion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="billForm">
+          <div class="mb-3">
+            <label for="ebUnit" class="form-label">Enter Your EB Unit</label>
+            <input type="number" class="form-control" [(ngModel)]="ebUnit" name="ebUnit" placeholder="Units">
+          </div>
+          <div class="mb-3">
+            <label for="ebUnit" class="form-label">Enter Up EB Unit</label>
+            <input type="number" class="form-control" [(ngModel)]="upebUnit" name="upebUnit" placeholder="Units">
+          </div>
+          <button type="button" class="btn btn-primary" (click)="calculateBill(2)">Calculate</button>
+        </form>
+
+        <hr>
+
+        <p>EB Bill Amount: ₹ <span >{{ebBill}}</span></p>
+        <p>Water Bill Amount: ₹ <span >{{waterBill}}</span></p>
+        <p><strong>Total Amount: ₹ <span>{{total}}</span></strong></p>
+      </div>
+    </div>
+  </div>
+</div>

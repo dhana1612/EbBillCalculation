@@ -1,0 +1,17 @@
+.button-container {
+  flex-wrap: wrap;        /* Wrap buttons on smaller screens */
+}
+
+.bill-btn {
+  min-width: 220px;       /* Make buttons uniform size */
+  font-size: 1.3rem;        /* Adjust font size */
+  font-weight: 600;       /* Semi-bold text */
+  padding: 0.7rem 1rem;   /* Bigger padding */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+}
+
+.bill-btn:hover {
+  transform: translateY(-3px);          /* Slight lift on hover */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Shadow effect */
+  cursor: pointer;
+}
