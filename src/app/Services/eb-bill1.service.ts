@@ -15,12 +15,12 @@ export class EbBill1Service {
     {
         if (units <= 50)
             bill = 0;
-        else if (units <= 150)
+        else if (units <= 100) //100
             bill = (units - 50) * 2.35;
-        else if (units <= 350)
-            bill = 100 * 2.35 + (units - 150) * 4.70;
+        else if (units <= 300) // 300
+            bill = 100 * 2.35 + (units - 100) * 4.70;
         else 
-            bill = 100 * 2.35 + 200 * 4.70 + (units - 350) * 6.30;
+            bill = 100 * 2.35 + 200 * 4.70 + (units - 300) * 6.30;
     }
     else 
     {
